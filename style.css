@@ -1,0 +1,172 @@
+/* Temel Sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Daha belirgin ve tok bir gri tonu */
+    background-color: #7a7d82; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Ana Kart Taşıyıcı */
+.main-container {
+    max-width: 900px;
+    width: 100%;
+    /* Kartın içi okunaklı olması için beyaz kalıyor */
+    background-color: #ffffff;
+    border-radius: 20px;
+    /* Gölgeyi gri arka planda belli olsun diye biraz daha vurguladık */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25); 
+    overflow: hidden;
+    border: none;
+}
+
+/* --- Üst Banner Alanı --- */
+.banner {
+    background: linear-gradient(135deg, #8E5474, #5F5477);
+    padding: 60px 40px;
+    color: #fff;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Fotoğrafın İçinde Duracağı Daire */
+.logo-circle {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #ffffff;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Fotoğrafın Ayarı (Tam Sığdırma) */
+.site-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* --- Alt İçerik Alanı --- */
+.content-section {
+    display: flex;
+    padding: 50px 40px;
+    color: #333333;
+}
+
+.column {
+    flex: 1;
+}
+
+.column h2 {
+    font-size: 24px;
+    color: #222222;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Sol Sütun (Hakkında) */
+.about-column {
+    padding-right: 40px;
+    border-right: 1px solid #eeeeee;
+}
+
+.about-column p {
+    color: #555555;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Sağ Sütun (Sosyal Medya) */
+.contact-column {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sosyal Medya İkonları Alanı */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Instagram İkonu */
+.icon-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #555;
+    font-size: 32px;
+    transition: all 0.3s ease;
+}
+
+.icon-link.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-color: transparent;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text h1 {
+        font-size: 28px;
+    }
+
+    .content-section {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .about-column {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .contact-column {
+        padding-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+}
